@@ -4,6 +4,6 @@ float_num = input('Введите любое вещественное число
 
 sum = 0
 for i in float_num:
-    if i != ' ':
+    if i != '.' and i != ',':
         sum += int(i)
 print(sum)

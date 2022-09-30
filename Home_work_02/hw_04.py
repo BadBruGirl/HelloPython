@@ -10,7 +10,8 @@ with open('file.txt', 'w') as data:
     data.write('9\n')
 
 def get_numbers(n):
-    return [randint(-n/2, n) for i in range(-n, n + 1)]
+    return [i for i in range(-n, n + 1)]
+    # return [randint(-n/2, n) for i in range(-n, n + 1)]
 
 def get_data_from_file(path):
     data = open(path, 'r')

@@ -60,13 +60,15 @@ while mainloop:
 
             player_win = get_win_check(field, "x")
             comp_win = get_win_check(field, "0")
+            
             if player_win or comp_win:
-                pygame.display.set_caption("Вы выиграли!!!!!!")
-            else:
-                pygame.display.set_caption("Искусственный интеллект сделал тебя! Иди тренеруйся")
-        elif field[0].count("x") + field[0].count("0") + field[1].count("x") + \
-                field[1].count("0") + field[2].count("x") + field[2].count("0") == 8:
-            pygame.display.set_caption("Ничья")    
+                if player_win:
+                    pygame.display.set_caption("Вы выиграли!!!!!!")
+                else:
+                    pygame.display.set_caption("Искусственный интеллект сделал тебя! Иди тренеруйся")
+            elif field[0].count("x") + field[0].count("0") + field[1].count("x") + \
+                    field[1].count("0") + field[2].count("x") + field[2].count("0") == 8:
+                pygame.display.set_caption("Ничья")    
 
 
     draw_xo(screen, field)
